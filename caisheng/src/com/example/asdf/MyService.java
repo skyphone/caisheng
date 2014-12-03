@@ -15,16 +15,17 @@ public class MyService extends Service {
 	@Override
 	public IBinder onBind(Intent intent) {
 		// TODO Auto-generated method stub
-		return myBind;
+		return myBinds;
 	}
 
 	class MyBind extends Binder{
+		
 		MyService getMyService(){
 			return MyService.this;
 		}
 	}
 	
-	MyBind myBind=new MyBind();
+	MyBind myBinds=new MyBind();
 	
 
 }
